@@ -1,14 +1,13 @@
-package main.Devices;
+package main.Games;
 
-public class iOSDevice extends Device {
-
-   public iOSDevice(String name) {
-
-    	   this.type = "iOS";
-           this.name = name;    	   
+public class VolleyballGame extends Game {
+	
+	public VolleyballGame(String name){
+        this.name = name;
+        this.type = Types.volleyball;
     }
-   
-   @Override
+ 
+ @Override
    public boolean equals(Object obj) {
        if (this == obj)
            return true;
@@ -17,7 +16,7 @@ public class iOSDevice extends Device {
        if (getClass() != obj.getClass())
            return false;
 
-       iOSDevice other = (iOSDevice) obj;
+       VolleyballGame other = (VolleyballGame) obj;
 
        if ( name == null) {
            if (other.name != null)
@@ -31,4 +30,5 @@ public class iOSDevice extends Device {
            return false;
        return true;
    }
+
 }

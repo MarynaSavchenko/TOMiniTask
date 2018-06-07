@@ -1,9 +1,7 @@
 package main;
 
-import main.Devices.IDevice;
-import main.Devices.iOSDevice;
-import main.Games.GameOne;
-import main.Games.IGame;
+import main.Devices.*;
+import main.Games.*;
 
 
 public class main {
@@ -13,18 +11,24 @@ public class main {
         System.out.println("Hello! Let's start the example!");
 
         Totalizator totalizator = new Totalizator();
+        
 
-        IGame gameOne = new GameOne("gameOne");
-        gameOne.updateScores("1:3");
-
-        totalizator.addGame(gameOne);
-
-        IDevice iosdevice = new iOSDevice("iOS", "iphone");
-        iosdevice.chooseGame(gameOne);
-
+        Game footballGame = new FootballGame("Cracovia-Wisła");
+        totalizator.addGame(footballGame);
+        
+        Device iosdevice = new iOSDevice("iphone");
+        iosdevice.chooseGame(footballGame);
         iosdevice.registerToTotalizator(totalizator);
+        
+        Device windowsdevice = new WindowsDevice("windowsphone");
+        windowsdevice.chooseGame(footballGame);
+        windowsdevice.registerToTotalizator(totalizator);
+        
+        footballGame.updateScores("1:3");
 
-        totalizator.notifyDevices();
+        
+
+        
 
 
     }
