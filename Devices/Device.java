@@ -18,6 +18,7 @@ public abstract class Device {
        totalizator.addDevice(this, game);
     }
 
+<<<<<<< HEAD
     public void unregisterFromTotalizator(Totalizator totalizator){
 
         totalizator.removeDevice(this, game);
@@ -26,6 +27,11 @@ public abstract class Device {
     public void update(Game game){
 
        System.out.println(type+" "+name+" updated: Game: "+game.getName()+" new scores: " + game.getScores() + "\n");
+=======
+    public void update(Game game){
+
+       System.out.println(type+" "+name+" updated: Game: "+game.getName()+" new scores: " + game.getScores());
+>>>>>>> 493dacd087cf3abf555620ab9f4531d42bd64d67
     }
 
 

@@ -19,6 +19,7 @@ public abstract class Game {
 
     public void updateScores(String scores){
         this.scores = scores;
+<<<<<<< HEAD
 
         if(totalizator != null) {
             totalizator.updateScoreNotification(this);
@@ -28,6 +29,12 @@ public abstract class Game {
     }
 
 
+=======
+        totalizator.notifyDevices(this);
+        
+    }
+    
+>>>>>>> 493dacd087cf3abf555620ab9f4531d42bd64d67
     public void setTotalizator(Totalizator totalizator) {
     	this.totalizator=totalizator;
     }

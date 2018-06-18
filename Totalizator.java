@@ -20,6 +20,7 @@ public class Totalizator {
                 }
     }
 
+<<<<<<< HEAD
     public void removeGame(Game game){
 
         if(!devices.containsKey(game)){
@@ -29,6 +30,8 @@ public class Totalizator {
             game.setTotalizator(this);
         }
     }
+=======
+>>>>>>> 493dacd087cf3abf555620ab9f4531d42bd64d67
 
     public void addDevice(Device device, Game game){
 
@@ -40,10 +43,18 @@ public class Totalizator {
             }
         }
         else {
+<<<<<<< HEAD
         	System.out.println("There is no such game!\n");
         }
     }
 
+=======
+        	System.out.println("There is no such game!");
+        }
+    }
+
+
+>>>>>>> 493dacd087cf3abf555620ab9f4531d42bd64d67
     public void removeDevice(Device device, Game game){
 
         if(devices.containsKey(game))
@@ -53,6 +64,7 @@ public class Totalizator {
                 devices.get(game).remove(device);
             }
         }
+<<<<<<< HEAD
 
 
     public void updateScoreNotification(Game game){
@@ -64,6 +76,11 @@ public class Totalizator {
     }
 
     private void notifyDevices(Game game){
+=======
+    
+
+    public void notifyDevices(Game game){
+>>>>>>> 493dacd087cf3abf555620ab9f4531d42bd64d67
     	    	
     	Iterator<Device> subscribedDevice = devices.get(game).iterator();
     	while(subscribedDevice.hasNext())
